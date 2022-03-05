@@ -14,8 +14,8 @@
 
 ## Background
 
-This repo is intended for any individual wanting to improve their problem
-solving skills for software engineering interviews.
+This repo is intended for any individual that want to improve their problem
+solving skills for coding interviews.
 
 Problems are grouped under their respective subtopic, in order to focus on
 repeatedly applying common patterns rather than randomly tackling questions.
@@ -43,21 +43,11 @@ In addition, you should have a good grasp on common algorithms such as:
 - Binary search
 - Recursion
 
-## Notes
-
-[This pdf] contains useful information for the built-in data structures in Java.
-
-Other useful methods to know include [`substring()`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-int-), [`toCharArray()`](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#toCharArray--), [`Math.max()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#max-int-int-),
-[`Math.min()`](https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html#min-int-int-), and [`Arrays.fill()`](https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html#fill-int:A-int-).
-
 ## Question List
 
-The entire question list can be found here:
+The some question that are solved here can be found here:
 https://seanprashad.com/leetcode-patterns/.
 
-In addition to viewing the question list, companies that have previously asked
-the question in the past 6 months (_as of May 2021_) will be listed. You can
-also use the checkboxes to mark which questions you've completed!
 
 ## Solutions
 
