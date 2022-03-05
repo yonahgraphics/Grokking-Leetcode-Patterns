@@ -112,20 +112,20 @@ Feel free to open an [issue] with your suggestion!
 
 ## Acknowledgements
 
-This list is heavily inspired by  from [Grokking the Coding Interview] with
+This list is heavily inspired by  from [Grokking the Coding Interview]  and  [Sean Prashad's leetcode Patterns repository], with
 additional problems extracted from the [Blind 75 list] and this medium article
 on [14 patterns to ace any coding interview question].
 
-[Sean Prashad's leetcode Patterns repository]: https://github.com/seanprashad/leetcode-patterns
 [leetcode premium]: https://leetcodehttps://github.com/seanprashad/leetcode-patterns.com/subscribe/
 [this pdf]: https://drive.google.com/open?id=1ao4ZA28zzBttDkuS6MLQI52gDs_CJZEm
 [cracking the coding interview]: http://www.crackingthecodinginterview.com/contents.html
 [here]: https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
 [topcoder]: https://www.topcoder.com/community/competitive-programming/tutorials/dynamic-programming-from-novice-to-advanced/
 [back to back swe youtube channel]: https://www.youtube.com/watch?v=jgiZlGzXMBw
-[solutions]: https://github.com/SeanPrashad/leetcode-patterns/tree/solutions
+[solutions]: https://github.com/yonahgraphics/Leetcode-Patterns
 [leetcode discuss]: https://leetcode.com/discuss/interview-question
 [grokking the coding interview]: https://www.educative.io/courses/grokking-the-coding-interview
-[issue]: https://github.com/SeanPrashad/leetcode-patterns/issues/new
+[Sean Prashad's leetcode Patterns repository]: https://github.com/seanprashad/leetcode-patterns
+[issue]: https://github.com/yonahgraphics/Leetcode-Patterns/issues/new
 [blind 75 list]: https://www.teamblind.com/article/New-Year-Gift---Curated-List-of-Top-100-LeetCode-Questions-to-Save-Your-Time-OaM1orEU?utm_source=share&utm_medium=ios_app
 [14 patterns to ace any coding interview question]: https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
