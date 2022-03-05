@@ -1,4 +1,4 @@
-# Leetcode Patterns
+# Grokking Leetcode Patterns
 
 ## Table of Contents
 
