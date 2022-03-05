@@ -53,10 +53,6 @@ https://seanprashad.com/leetcode-patterns/.
 
 Solutions written in Pythin can be found in the [solutions] branch.
 
-## Pattern 1: Sliding Window
-
-## Pattern 2: Two Pointer
-
 ## Leetcode Discuss
 
 [Leetcode discuss] is an amazing resource and features previous interview
