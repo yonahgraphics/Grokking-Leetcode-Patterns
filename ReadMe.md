@@ -51,7 +51,7 @@ https://seanprashad.com/leetcode-patterns/.
 
 ## Solutions
 
-Solutions written in Pythin can be found here[solutions].
+Solutions written in Pythin can be found [here].
 
 ## Leetcode Discuss
 
