@@ -22,7 +22,7 @@ are in the range [0,2]. 2 is the missing number in the range since it does not a
 
 #Approach1: Sorting
 #Time complexity: O(nlogn)
-#Sapce complexity: O(n) due to timsort space requirement
+#Space complexity: O(n) due to timsort space requirement
 def missingNumber1(nums):
     nums.sort()
     if nums[-1] < len(nums):
@@ -45,7 +45,7 @@ def missingNumber2(nums):
             return i
 
 # Approach3: Simple logic
-# Time complexity: O(N) === O(N) due to the two for loops
+# Time complexity: O(2N) === O(N) due to the two for loops
 # Space complexity: O(1)
 def missingNumber3(nums):
     givenSum = 0
@@ -56,8 +56,16 @@ def missingNumber3(nums):
         totalSum += i
     return totalSum - givenSum
 
+def missingNumber4(nums):
+    res = 0
+    for i in range(len(nums)+1):
+        if i < len(nums):
+            res ^= nums[i]
+        res ^= i
+    return res
+
 if __name__ == "__main__":
     print(missingNumber1([0,1]))
     print(missingNumber2([0,1]))
     print(missingNumber3([0,1]))
-        
+    print(missingNumber4([0,1]))
