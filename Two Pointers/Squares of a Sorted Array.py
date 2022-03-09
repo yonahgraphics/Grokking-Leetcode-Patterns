@@ -23,6 +23,11 @@ def sortedSquares(nums):
     return nums
 
 # Two Pointer Approach
+# Since we can have negative numbers, we may not have a sorted squares result.
+# We can put one pointer at the beginning and the other at the end and keep comparing
+# the values at those postns, keeping the greater one and shifting the pointers accordingly until the
+# pointers cross.
+# Then we can sort the result in ascending order and return it
 # Time Complexity: O(n)
 # Space Complexity: O(n)
 def sortedSquares1(self, nums):
