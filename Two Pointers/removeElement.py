@@ -6,7 +6,7 @@ remove all occurrences of val in nums in-place.
 
 # Time Complexity: O(2N) === O(N)
 # Space Complexity: O(1)
-def removeElement(self, nums, val):
+def removeElement(nums, val):
     i = 0
     for j in range(0, len(nums)):
         if nums[j] != val:
