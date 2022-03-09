@@ -12,20 +12,6 @@ Return k after placing the final result in the first k slots of nums.
 Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
 '''
 def removeDuplicates(nums):
-    i = 1
-    for j  in range(1, len(nums)):
-        
-        if nums[j] == nums[j-1]:
-            j += 1 
-        else:
-            nums[i] = nums[j]
-            i += 1
-            j += 1
-    
-    return i
-    
-'''
-def removeDuplicates(nums):
         i = 1
         for j  in range(1, len(nums)):
             
@@ -34,7 +20,6 @@ def removeDuplicates(nums):
                 i += 1 
         return i
     
-'''
 if __name__ == "__main__":
     print(removeDuplicates([1,2,2,3,4,5]))
         
