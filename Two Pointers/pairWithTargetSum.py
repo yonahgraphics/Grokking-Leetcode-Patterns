@@ -49,7 +49,7 @@ the start-pointer.
 def twoSumTwoPointer(arr, target):
     left = 0
     right = len(arr) - 1
-    while left < right:
+    while left <= right:
         currSum = arr[left] + arr[right]
         if currSum == target:
             return [left, right]
