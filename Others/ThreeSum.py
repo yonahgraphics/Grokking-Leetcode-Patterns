@@ -12,7 +12,6 @@ def threeSum(nums): # O(n3)
                             res.append(soln)
         return res
     
-    
 def threeSumOptimum(nums): # O(n2)
     nums.sort()
     res = []
