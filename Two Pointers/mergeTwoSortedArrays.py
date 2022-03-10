@@ -9,6 +9,7 @@ def mergeSortedArrays(arr1, arr2):
         else:
             res.append(arr2[j])
             j += 1
+            # i += 1 # Increment i as well if you want to remove duplicates
         if i >= len(arr1) and j < len(arr2):
             res.extend(arr2[j:])
             return res
