@@ -1,3 +1,6 @@
+# The bruteforce solution uses 3 loops 
+# Time complexity: O(n^3)
+# Space complexity: O(1)
 def threeSum(nums): # O(n3)
         res = []
         for i in range(len(nums)):
@@ -12,8 +15,12 @@ def threeSum(nums): # O(n3)
                             res.append(soln)
         return res
     
+# Time complexity: O(n2)
+# Space Complexity: O(1)
+# We basically reduce the problem to twoSum II, and then choose one number at a time from the input
+# and combine it with two numbers in the remaining Array
 def threeSumOptimum(nums): # O(n2)
-    nums.sort()
+    nums.sort() # Sort the input array to ensure that duplicates appear close to each other
     res = []
     for i in range(len(nums)):
         if i > 0 and nums[i]==nums[i-1]:
@@ -27,7 +34,7 @@ def threeSumOptimum(nums): # O(n2)
             else:
                 res.append([nums[i], nums[l], nums[r]])
                 l += 1
-                while nums[l] == nums[l-1] and l < r:
+                while nums[l] == nums[l-1] and l < r: # We keep shifting the left pointer to avoid duplicates while l < r
                     l += 1
     return res
 
