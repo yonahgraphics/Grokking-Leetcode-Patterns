@@ -1,4 +1,7 @@
 """
+Merge Sorted Array 
+https://leetcode.com/problems/merge-sorted-array/
+
 You are given two integer arrays nums1 and nums2, sorted in non-decreasing order,
 and two integers m and n, representing the number of elements in nums1 and nums2 respectively.
 Merge nums1 and nums2 into a single array sorted in non-decreasing order.
@@ -32,7 +35,6 @@ def merge(nums1, m, nums2, n):
             n -= 1
             lastIndex -= 1
     return nums1
-
 
 # Input: nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
 # Output: [1,2,2,3,5,6]
