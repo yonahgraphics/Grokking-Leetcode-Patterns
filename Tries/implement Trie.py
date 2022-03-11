@@ -23,6 +23,12 @@ class Trie:
     def __init__(self):
         self.root = Node()
 
+#Time complexity : O(n), where n is the key length.
+#In each iteration of the algorithm, we either examine or 
+# create a node in the trie till we reach the end of the key. 
+# This takes only n operations.
+#Space complexity : O(n).
+
     def insert(self, word: str) -> None:
         curr = self.root
         for char in word:
@@ -31,7 +37,6 @@ class Trie:
             curr = curr.children[char]
         curr.endOfWord = True
         
-
     def search(self, word: str) -> bool:
         curr = self.root
         for char in word:
@@ -49,10 +54,8 @@ class Trie:
             curr = curr.children[char]
         return True
         
-
-
-# Your Trie object will be instantiated and called as such:
-# obj = Trie()
-# obj.insert(word)
-# param_2 = obj.search(word)
-# param_3 = obj.startsWith(prefix)
+if __name__ == "__main__":
+    obj = Trie()
+    obj.insert("word")
+    param_2 = obj.search("word")
+    param_3 = obj.startsWith("prefix")
