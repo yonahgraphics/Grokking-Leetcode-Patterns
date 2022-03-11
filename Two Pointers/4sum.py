@@ -1,7 +1,10 @@
+# Time Complexity: O(n^3)
+# Space Complexity: O(n) # Due to the result array
+
 def fourSum(nums, target):
     nums.sort()
     result = []
-    
+
     for i in range(len(nums)-3):
         if i > 0 and nums[i] == nums[i-1]:
             continue
