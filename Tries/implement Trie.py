@@ -36,7 +36,12 @@ class Trie:
                 curr.children[char] = Node()
             curr = curr.children[char]
         curr.endOfWord = True
-        
+
+# Time complexity : O(n) In each step of the algorithm 
+# we search for the next key character. 
+# In the worst case the algorithm performs n operations. n is the length of the word
+# Space complexity : O(1)
+    
     def search(self, word: str) -> bool:
         curr = self.root
         for char in word:
@@ -45,7 +50,11 @@ class Trie:
             curr = curr.children[char]
         return curr.endOfWord
         
-
+# Time complexity : O(n) In each step of the algorithm 
+# we search for the next key character. 
+# In the worst case the algorithm performs n operations. n is the lenth of the prefix
+# Space complexity : O(1)
+  
     def startsWith(self, prefix: str) -> bool:
         curr = self.root
         for char in prefix:
@@ -57,5 +66,8 @@ class Trie:
 if __name__ == "__main__":
     obj = Trie()
     obj.insert("word")
-    param_2 = obj.search("word")
-    param_3 = obj.startsWith("prefix")
+    ans1 = obj.search("word")
+    ans2 = obj.startsWith("prefix")
+    print(ans1)
+    print(ans2)
+  
