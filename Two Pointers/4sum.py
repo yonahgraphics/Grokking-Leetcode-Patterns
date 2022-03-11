@@ -26,6 +26,8 @@ def fourSum(nums, target):
                         l += 1
     return result
 
+
+# You could also just use a set to avoid duplicates
 # Input: nums = [1,0,-1,0,-2,2], target = 0
 # Output: [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
     if __name__ == "__main__":
