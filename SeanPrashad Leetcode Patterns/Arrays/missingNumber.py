@@ -62,7 +62,7 @@ def missingNumber4(nums):
         if i < len(nums):
             res ^= nums[i]
         res ^= i
-    return res
+    return ress
 
 if __name__ == "__main__":
     print(missingNumber1([0,1]))
