@@ -22,6 +22,8 @@ def reverseWords1(s):
     while True:
         while i < len(s) and s[i] == ' ':
             i += 1
+        if i >= len(s):
+            break
         j = i+ 1
         while  j < len(s) and s[j] != ' ':
             j += 1
@@ -29,13 +31,10 @@ def reverseWords1(s):
         if result == "":
             result = result + sub
         else:
-            if sub != '':
-                result = sub + " " + result
+            result = sub + " " + result
         
         i = j + 1
         
-        if i >= len(s):
-            break
     return result
 
 
