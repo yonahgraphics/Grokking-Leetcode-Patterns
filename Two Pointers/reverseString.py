@@ -9,6 +9,9 @@ Example 1:
 Input: s = ["h","e","l","l","o"]
 Output: ["o","l","l","e","h"]
 '''
+
+#Time Complexity: O(n) since we traverse the sting only once
+#Space Complexity: O(1) since we don't use any extra space
 def reverseString(s):
     """
     :type s: List[str]
