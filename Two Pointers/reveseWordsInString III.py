@@ -14,7 +14,6 @@ Output: "s'teL ekat edoCteeL tsetnoc"
 # Space Complexity: O(m) since we have to convert the word to a list
 def reverseWords(s):
     result = ""
-    
     i = 0
     while True:
         while i < len(s) and s[i] == ' ':
@@ -28,9 +27,7 @@ def reverseWords(s):
             result += reverseStr(sub)
         else:
             result = result + " "  + reverseStr(sub)
-        
         i = j + 1
-        
         if i >= len(s):
             break
     return result
