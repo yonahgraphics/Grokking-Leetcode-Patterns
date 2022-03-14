@@ -28,7 +28,30 @@ def fourSum(nums, target):
 
 
 # You could also just use a set to avoid duplicates
+def fourSum1(nums, target):
+    ans = set()
+    n = len(nums)
+    nums.sort()
+    for i in range(n):
+        for j in range(i+1,n):
+            left = j + 1
+            right = n - 1
+
+            while left < right:
+                total = nums[i] + nums[left] + nums[right]+nums[j]
+                if total > target:
+                    right -= 1
+                elif total < target:
+                    left += 1
+                else:
+                    ans.add((nums[i], nums[left], nums[right],nums[j]))
+
+                    left += 1
+                    right -= 1
+    return ans
+
 # Input: nums = [1,0,-1,0,-2,2], target = 0
 # Output: [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
-    if __name__ == "__main__":
-        print(fourSum([1,0,-1,0,-2,2], 0))
+if __name__ == "__main__":
+    print(fourSum([1,0,-1,0,-2,2], 0))
+    print(fourSum1([1,0,-1,0,-2,2], 0))
