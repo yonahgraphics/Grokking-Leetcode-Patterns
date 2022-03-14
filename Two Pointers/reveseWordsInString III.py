@@ -9,6 +9,9 @@ Example 1:
 Input: s = "Let's take LeetCode contest"
 Output: "s'teL ekat edoCteeL tsetnoc"
 '''
+# Time Complexity: O(n*m) where n is the length of the entire string and m is 
+# the average length of a word in the string
+# Space Complexity: O(m) since we have to convert the word to a list
 def reverseWords(s):
     result = ""
     
