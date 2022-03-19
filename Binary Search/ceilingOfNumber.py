@@ -28,6 +28,9 @@ because of this reduced space requirement.
 '''
 
 
+# The key is to know that the ceiling will be the number on the right of the target
+# if the target is not in the array as long as we are not at the end of the array
+# To get this number, return the index where the low pointer becomes greater than the high pointer
 # Time Compleexity: O(n)
 # Space Complexity: O(1)
 def searchInsert1(nums, key):
