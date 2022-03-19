@@ -17,6 +17,8 @@ Output: -1
 Explanation: 2 does not exist in nums so return -1
 '''
 
+#Time Complexity: O(n)
+#Space Complexity: O(logn) # Because we will have frames occupied by recursive calls
 def BinarySearchRecursive(data, key, low, high):
     # Base case
     if low > high:
@@ -36,6 +38,8 @@ def BinarySearchRecursive(data, key, low, high):
         BinarySearchRecursive(data, key, low, high)
 
 
+#Time Complexity: O(n)
+#Space Complexity: O(1) # Because only one frame will be occupied by one recursive call.
 def BinarySearchIterative(data, target):
     data.sort() #nlogn
     found = False
