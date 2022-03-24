@@ -19,6 +19,9 @@ Explanation: 3 boats (1, 2), (2) and (3)
 Leetcode link: https://leetcode.com/problems/boats-to-save-people/
 '''
 
+# Time Complexity: O(n) + O(nlogn) === O(nlogn)
+# Space Comlexity: O(n) due to TimSort()
+
 def numRescueBoats(people, limit):
     people.sort()
     
