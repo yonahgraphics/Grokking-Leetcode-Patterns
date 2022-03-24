@@ -30,12 +30,12 @@ def numRescueBoats(people, limit):
     right = len(people) - 1
     
     while left <= right:
-        remainder = limit - people[right]
-        numBoats += 1
-        right -= 1
-        
-        if left <= right and people[left] <= remainder:
-            left += 1
+       if people[left]  + people[right] <= limit:
+           left += 1
+           right -= 1
+       else:
+           right -= 1
+       numBoats += 1
     return numBoats
     
 if __name__ == "__main__":
