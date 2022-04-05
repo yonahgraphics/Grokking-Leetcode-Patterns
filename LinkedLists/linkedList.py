@@ -12,7 +12,8 @@ def printListIterative(head):
         print(curr.val)
         curr = curr.next
     
-
+# Time complexity: O(n)
+# Space complexity: O(n)
 def printListRecursive(head):
     if head is None:
         return
