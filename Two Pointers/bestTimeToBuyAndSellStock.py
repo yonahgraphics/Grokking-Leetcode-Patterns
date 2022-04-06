@@ -22,19 +22,15 @@ def maxProfit1(prices):
 # Space Complxity: O(1), no auxilliary space used.
 
 def maxProfit(prices):
-    """
-    :type prices: List[int]
-    :rtype: int
-    """
-    i = 0 # buy
-    j = 1 # sell
-    
     max_profit = 0
-    for j in range(len(prices)):
-        curr_profit = prices[j] - prices[i]
-        if curr_profit <= 0: # not making profits
-            i = j # buy another day
-        max_profit = max(max_profit, curr_profit) # set max profit
+    i = 0
+    for j in range(1, len(prices)):
+        profit = prices[j] - prices[i]
+        if profit > 0: # Making profit
+            max_profit = max(max_profit, profit) # Take max profit sofar
+        else:
+            i = j # Not making profits, buy another day
+        
     return max_profit
 
 if __name__ == "__main__":
