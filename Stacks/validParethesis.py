@@ -20,6 +20,8 @@ Input: s = "(]"
 Output: false
 """
 
+# Time complexity: O(n) because we traverse the entire string once
+# Space complexity: O(n) because we use a map, and stack
 def isValid(s):
     stack = []
     map = { ')': '(', '}':'{', ']':'['}
