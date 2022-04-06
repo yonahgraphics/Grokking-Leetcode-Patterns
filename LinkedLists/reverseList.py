@@ -27,7 +27,7 @@ def reverseList1(head, prev = None):
         return prev
     next = head.next
     head.next = prev
-    return reverseList1(next, prev)
+    return reverseList1(next, head)
 
 
 if __name__ == "__main__":
