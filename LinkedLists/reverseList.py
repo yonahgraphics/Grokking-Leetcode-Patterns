@@ -20,6 +20,14 @@ def reverseList(head):
         curr = next
     return prev
 
+def reverseList1(head, prev = None):
+    if head is None:
+        return prev
+    next = head.next
+    head.next = prev
+    return reverseList1(next, prev)
+
+
 if __name__ == "__main__":
     a = Node('A')
     b = Node('B')
