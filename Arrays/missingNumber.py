@@ -56,6 +56,8 @@ def missingNumber3(nums):
         totalSum += i
     return totalSum - givenSum
 
+# Time complexity: O(n)
+# Space complexity: O(1)
 def missingNumber4(nums):
     res = 0
     for i in range(len(nums)+1):
