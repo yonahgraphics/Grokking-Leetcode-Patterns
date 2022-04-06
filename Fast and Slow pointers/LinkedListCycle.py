@@ -13,15 +13,32 @@ Return true if there is a cycle in the linked list. Otherwise, return false.
 #         self.val = x
 #         self.next = None
 
-class Solution(object):
-    def hasCycle(self, head):
-        slow, fast =  head, head # Initialize the pointers
-        
-        while fast is not None and fast.next is not None: # while fast has not reached the end (if no cycle) and fast.next is not None
-            slow = slow.next
-            fast = fast.next.next
-            if slow == fast: # Once they meet, we know there's a cycle
-                return True
-        return False # Otherwise, there's no cycle
+# Time complexity: O(n)
+# Space complexity = O(1)
+def hasCycle(self, head):
+    slow, fast =  head, head # Initialize the pointers
+    
+    while fast is not None and fast.next is not None: # while fast has not reached the end (if no cycle) and fast.next is not None
+        slow = slow.next
+        fast = fast.next.next
+        if slow == fast: # Once they meet, we know there's a cycle
+            return True
+    return False # Otherwise, there's no cycle
+    
+
+# We can set every node's value we visit to Null and if we encounter Null again, there's a cycle
+# If instead the loop terminates due to reaching the tail of the list, there's no cycle
+# Time complexity: O(n)
+# Space complexity = O(1)
+def hasCycle1(self, head):
+    curr = head
+    while curr is not None:
+        if curr.val is not None:
+            curr.val = None
+        else:
+            return True
+        curr = curr.next
+    return False
             
+        
             
