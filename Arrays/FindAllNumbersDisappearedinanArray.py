@@ -1,5 +1,5 @@
 # Time complexity: O(n)
-# Space complexity: On1)
+# Space complexity: O1)
 def findDisappearedNumbers(nums):
     seen = set(nums)
     res = []
