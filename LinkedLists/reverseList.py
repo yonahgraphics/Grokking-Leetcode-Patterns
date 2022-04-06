@@ -20,6 +20,8 @@ def reverseList(head):
         curr = next
     return prev
 
+# Time complexity: O(n)
+# Space complexity: O(n) due to the call stack
 def reverseList1(head, prev = None):
     if head is None:
         return prev
