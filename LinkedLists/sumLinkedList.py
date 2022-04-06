@@ -18,7 +18,7 @@ def sumListIterative(head):
     return totalVal
 
 # Time complexity: O(n)
-# Space complexity: O(n) due to the call stack
+# Space complexity: O(n) due to the call stack 
 def sumListRecursive(head):
     if head is None:
         return 0
