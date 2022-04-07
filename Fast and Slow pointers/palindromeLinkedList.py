@@ -23,4 +23,29 @@ def isPalindrome(head):
         j -= 1
     return True
         
+
+def isPalindrome(self, head):
+    # Find the middle of the linkedList
+    slow, fast = head, head
+    
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
         
+    # Reverse a portion of a the linkedList
+    prev = None
+    curr = slow
+    while curr is not None:
+        temp = curr.next
+        curr.next = prev
+        prev = curr
+        curr = temp
+    # Compare the values and check for palindrome
+    while prev is not None:
+        if prev.val != head.val:
+            return False
+        head = head.next
+        prev = prev.next 
+    return True
+    
+    
