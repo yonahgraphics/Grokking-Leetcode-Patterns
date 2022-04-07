@@ -14,8 +14,8 @@ def isPalindrome(head):
         nodes_values.append(curr.val)
         curr = curr.next
     
+    # Two pointer approach
     i, j = 0, len(nodes_values)-1
-    
     while i < j:
         if nodes_values[i] != nodes_values[j]:
             return False
