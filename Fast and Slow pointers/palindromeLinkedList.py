@@ -24,6 +24,9 @@ def isPalindrome(head):
     return True
         
 
+
+#Time complexity O(n)
+# Space complexity: O(1)
 def isPalindrome(self, head):
     # Find the middle of the linkedList
     slow, fast = head, head
