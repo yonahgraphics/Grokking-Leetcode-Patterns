@@ -14,24 +14,18 @@ For n = 1, 2, 3, 4, and 5, the middle nodes are 0, 1, 1, 2, and 2, respectively.
 #         self.val = val
 #         self.next = next
 
-
-# Time complexity: O(n)
-# Space complexity: O(n)
-def middleNode(head):
-    def dfs(head, slow = head, fast = head):
-        if fast is None or fast.next is None:
-            return slow
-        return dfs(head, slow.next, fast.next.next)
-    return dfs(head, head, head)
-
 # Time complexity: O(n)
 # Space complexity: O(1)
 def middleNode(head):
-        slow = head
+        dummy = ListNode()
+        dummy.next = head
+        prev = dummy
         fast = head
-        
+        slow = head
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
-        return slow
+            prev = prev.next
+        prev.next = slow.next
+        return dummy.next
 
