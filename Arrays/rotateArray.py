@@ -20,14 +20,16 @@ Explanation:
 rotate 1 steps to the right: [99,-1,-100,3]
 rotate 2 steps to the right: [3,99,-1,-100]
 """
-
-def rotate(self, nums, k):
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+def rotate(nums, k):
     k = k % len(nums)     #take care of the case where k >= len(nums)  
     nums[:] = nums[-k:] + nums[:-k] 
     return nums
 
-
-def rotate(self, nums, k):
+# Time Complexity: O(n)
+# Space Complexity: O(n)
+def rotate1(nums, k):
     res = [0]*len(nums)
     for i in range(len(nums)):
         shiftIndex = (i + k)%len(nums)
@@ -36,3 +38,5 @@ def rotate(self, nums, k):
     nums = res
     return nums
 
+print(rotate1([1,2,3,4], 2))
+print(rotate([1,2,3,4], 2))
