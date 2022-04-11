@@ -11,6 +11,8 @@ Return the 2D grid after applying shift operation k times.
 Input: grid = [[1,2,3],[4,5,6],[7,8,9]], k = 1
 Output: [[9,1,2],[3,4,5],[6,7,8]]
 """
+# Time complexity: O(m*n)
+# Space complexity: O(m*n)
 def shiftGrid(self, grid, k):
     
     nrows = len(grid)
