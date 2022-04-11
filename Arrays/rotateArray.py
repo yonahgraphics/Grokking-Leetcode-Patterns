@@ -38,5 +38,33 @@ def rotate1(nums, k):
     nums = res
     return nums
 
+# Time complexity: O(n)
+# Space complexity: O(1)    
+def rotate(self, nums, k):
+    k = k%len(nums)
+    # Reverse the whole array
+    i = 0
+    j = len(nums)-1
+    while i <= j:
+        nums[i], nums[j] = nums[j], nums[i]
+        i += 1
+        j -= 1
+    print(nums)
+    
+    # Reverse the first k elements
+    i = 0
+    j = k-1
+    while i <= j:
+        nums[i], nums[j] = nums[j], nums[i]
+        i += 1
+        j -= 1
+    #Reverse the remainder
+    i = k
+    j = len(nums)-1
+    while i <= j:
+        nums[i], nums[j] = nums[j], nums[i]
+        i += 1
+        j -= 1
+
 print(rotate1([1,2,3,4], 2))
 print(rotate([1,2,3,4], 2))
