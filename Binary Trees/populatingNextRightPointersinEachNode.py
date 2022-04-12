@@ -24,7 +24,7 @@ class Node:
 
 # Time complexity: O(n)
 # Space complexity: O(1)
-def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
+def connect(root):
     curr = root
     nxt = root.left if root else None
     while curr and nxt:
@@ -36,5 +36,22 @@ def connect(self, root: 'Optional[Node]') -> 'Optional[Node]':
             curr = nxt
             nxt = curr.left
     return root
-    
+
+# Time complexity: O(n)
+# Space complexity: O(n)
+def connect(root):
+    def dfs(root):
+        if root is None or root.left is None:
+            return None
+        if root.left is None:
+            return root
+        root.left.next = root.right
+        if root.next is not None:
+            root.right.next = root.next.left
+        dfs(root.left)
+        dfs(root.right)
         
+    dfs(root)
+    return root
+
+    
