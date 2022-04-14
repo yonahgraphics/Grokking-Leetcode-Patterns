@@ -13,21 +13,23 @@ Complexity Analysis
 Time Complexity: O(R * C), where R and C are the number of rows and columns in the given matrix A.
 Space Complexity: O(1), b'se we don't use extra space.
 '''
-def rotate(matrix):
+def rotate(self, matrix):
     """
-    Do not return anything, modify matrix in-place instead.
+    :type matrix: List[List[int]]
+    :rtype: None Do not return anything, modify matrix in-place instead.
     """
+    # Transpose the matrix
     rows = len(matrix)
-    columns = len(matrix[0])
+    cols = len(matrix[0])
     
     for i in range(rows):
-        for j in range(i, columns):
-            temp = matrix[i][j]
-            matrix[i][j] = matrix[j][i]
-            matrix[j][i] = temp
-    
-    for i in range(columns):
-        for j in range(columns//2):
-            temp = matrix[i][j] 
-            matrix[i][j] = matrix[i][columns-1-j]
-            matrix[i][columns-1-j] = temp
+        for j in range(i, cols):
+            matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+      
+    # Then reverse it
+    for i in range(cols):
+        l, r = 0, len(matrix[i])-1
+        while l < r:
+            matrix[i][l], matrix[i][r] = matrix[i][r], matrix[i][l]
+            l += 1
+            r -= 1
