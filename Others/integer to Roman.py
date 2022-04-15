@@ -33,8 +33,8 @@ Explanation: L = 50, V = 5, III = 3.
 
 """
 
-# Time complexity: O(n)  where n is the length of the string
-# Space complexity: O(1)
+# Time complexity: O(13) == O(1)  b'se we iterate over the map, which is never gonna change
+# Space complexity: O(13) === O(1) because the sixe of the map doesn't change
 def intToRoman(num: int) -> str:
     mapping = [
                 ['I', 1], ['IV', 4], ['V', 5], ['IX', 9], ['X', 10], ['XL', 40], ['L', 50], ['XC', 90], ['C', 100],                     ['CD', 400], ['D', 500], ['CM', 900], ['M', 1000]
