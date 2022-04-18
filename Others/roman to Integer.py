@@ -65,4 +65,6 @@ def romanToInt(s):
     intNum += map[s[len(s)-1]]
     return intNum
 
-print(romanToInt("III"))
+
+if __name__ == "__main__":
+    print(romanToInt("III"))
