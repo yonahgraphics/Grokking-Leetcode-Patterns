@@ -28,6 +28,8 @@ def maxArea(height):
             maxArea = max(maxArea, area)
     return maxArea
 
+# Time complexity: O(n)
+# Space complexity: O(1)
 def maxArea(height):
     # Approach 2
     left = 0
