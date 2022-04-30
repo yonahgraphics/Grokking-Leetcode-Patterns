@@ -47,6 +47,35 @@ def productExceptSelf1(nums):
             res.append(int(product/nums[j]))
         return res
 
+#Approach 3:
+# Precalculate the prefix and postfix products for each element
+# Then multiply the corresponding prefix and postfix
+# Time complexity: O(n)
+# Space complexity: O(n)
+
+def productExceptSelf(nums):
+    prefixArray  = [1]
+    postfixArray = [1]
+    
+    res = []
+    
+    # Populate prefix array
+    for i in range(len(nums)-1):
+        prefixArray.append(prefixArray[-1]* nums[i])
+    
+    # Populate postfix array
+    for i in range(1, len(nums)):
+        postfixArray.append(postfixArray[-1]* nums[-i])
+        
+    # Reverse the postfix array
+    postfixArray = postfixArray[::-1]
+    for i in range(len(nums)):
+        res.append(prefixArray[i]*postfixArray[i])
+        
+    return res
+    
+        
+
 if __name__ == "__main__":
     print(productExceptSelf([1,2,3,4]))
     print(productExceptSelf1([1,2,3,4]))
