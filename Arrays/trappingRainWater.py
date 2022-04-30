@@ -47,8 +47,31 @@ def trap(height):
             trappedWater += currTrapped
     return trappedWater
 
+# Approach 2
+# Time complexity: O(n) 
+# Space complexity: O(1) 
+def trap1(height):
+        left = 1
+        right = len(height)-2
+        maxLeft = height[0]
+        maxRight = height[-1]
+        trappedWater = 0
+        
+        while left <= right: # While the pointers have not met
+            if maxLeft < maxRight: # chose the water leve (min)
+                maxLeft = max(maxLeft, height[left]) # update to avoid negatives when we subtract
+                curr_trapped = maxLeft - height[left] # Get the trapped water at the current block
+                trappedWater += curr_trapped          #Update the water volume
+                left += 1                             #Move the pointer one step to the right
+            else: # Do the same thing for on the right in the else case
+                maxRight = max(maxRight, height[right])
+                curr_trapped = maxRight - height[right]
+                trappedWater += curr_trapped
+                right -= 1
+        return trappedWater
 
 if __name__ == "__main__":
     # Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
     # Output: 6
     print(trap([0,1,0,2,1,0,1,3,2,1,2,1]))
+    print(trap1([0,1,0,2,1,0,1,3,2,1,2,1]))
