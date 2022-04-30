@@ -16,6 +16,8 @@ Explanation: You will always arrive at index 3 no matter what.
 Its maximum jump length is 0, which makes it impossible to reach the last index.
 """
 
+# Time complexity: O(n)
+# Space complexity: O(1)
 def canJump(nums):
     target = len(nums)-1
     
