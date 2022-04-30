@@ -53,7 +53,7 @@ def productExceptSelf1(nums):
 # Time complexity: O(n)
 # Space complexity: O(n)
 
-def productExceptSelf(nums):
+def productExceptSelf2(nums):
     prefixArray  = [1]
     postfixArray = [1]
     
@@ -75,10 +75,11 @@ def productExceptSelf(nums):
     return res
     
         
-
 if __name__ == "__main__":
     print(productExceptSelf([1,2,3,4]))
     print(productExceptSelf1([1,2,3,4]))
+    print(productExceptSelf2([1,2,3,4]))
+
 
 
 
