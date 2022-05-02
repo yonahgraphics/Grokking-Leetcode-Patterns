@@ -26,7 +26,17 @@ def canJump(nums):
             target = i
     return target == 0
 
-
+# Using a while loop
+def canJump(self, nums: List[int]) -> bool:
+    target = len(nums)-1
+    
+    i = len(nums)-2
+    while i >= 0:  
+        if i + nums[i] >= target:
+            target = i
+        i -= 1
+    return target == 0
+    
 if __name__ == "__main__":
     print(canJump([1,2,1,4,0,2]))
     print(canJump([1,2,1,1,0,2]))
