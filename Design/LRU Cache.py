@@ -32,6 +32,7 @@ lRUCache.get(4);    // return 4
 """
 
 
+#Time complexity for get and put: O(1)
 
 #Doubly Linkedlist node to store key-value pairs
 class Node:
