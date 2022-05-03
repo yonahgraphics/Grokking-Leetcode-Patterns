@@ -59,12 +59,12 @@ def missingNumber3(nums):
 # Time complexity: O(n)
 # Space complexity: O(1)
 def missingNumber4(nums):
-    res = 0
-    for i in range(len(nums)+1):
-        if i < len(nums):
-            res ^= nums[i]
-        res ^= i
-    return ress
+   res = 0
+   for i in range(len(nums)+1):
+       res ^= i
+   for num in nums:
+       res ^= num
+   return res
 
 if __name__ == "__main__":
     print(missingNumber1([0,1]))
