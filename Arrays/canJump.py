@@ -27,7 +27,7 @@ def canJump(nums):
     return target == 0
 
 # Using a while loop
-def canJump(self, nums: List[int]) -> bool:
+def canJump(nums):
     target = len(nums)-1
     
     i = len(nums)-2

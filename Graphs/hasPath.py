@@ -9,7 +9,7 @@ graph = {
 
 
 #Iterative Approach (BFS)
-# Time Complexity: O(n), where n is the number of nodes
+# Time Complexity: O(e), where e is the number of edges
 # Space complexity: O(n) in the worst case where a node is connected to all the other nodes
 def hasPath(graph, source, destn):
     queue = [source]

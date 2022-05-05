@@ -50,6 +50,6 @@ def sortedSquares1(self, nums):
     return res[::-1]
             
 if __name__ == "__main__":
-    print(sortedSquares([1,2,3,4]))
-    print(sortedSquares([1,2,3,4]))
+    print(sortedSquares([-2, 1, 3]))
+    print(sortedSquares([-2, 1, 3]))
         

@@ -18,7 +18,7 @@ Both the left and right subtrees must also be binary search trees.
 #         self.right = right
 
 # Time complexity: O(n)
-# Space complexity: O(1)
+# Space complexity: O(n)
 def isValidBST(root):
     def dfs(root, left, right):
         if root is None:

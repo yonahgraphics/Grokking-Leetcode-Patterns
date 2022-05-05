@@ -47,14 +47,15 @@ def hasPath2(edges, source, destn):
 
 # Recursively
 def hasPath3(graph, source, destn, visited=set()):
-    if source not in visited:
-        if source == destn:
+    if source in visited:
+         return False
+    if source == destn:
+        return True
+    visited.add(source)
+    for node in graph[source]:
+        if hasPath3(graph, node, destn, visited) == True:
             return True
-        visited.add(source)
-        for node in graph[source]:
-            if hasPath3(graph, node, destn, visited) == True:
-                return True
-        return False
+    return False
     
 
 # Given edges
