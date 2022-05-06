@@ -7,9 +7,8 @@
 # Space complexity: O(1)
 def insertionSort(nums):
     for i in range(1, len(nums)):
-        # temp  = nums[i]
-        for j in range(i):
-            if nums[i] > nums[j]:
-                nums[i], nums[j] = nums[j], nums[i]
+        while i > 0 and nums[i-1] > nums[i]:
+            nums[i-1], nums[i] = nums[i], nums[i-1]
+            i -= 1
     return nums
 print(insertionSort([4,5,2,3]))
