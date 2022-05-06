@@ -20,4 +20,4 @@ def bubbleSort(nums):
         # time complexity to O(n)
             
     return nums
-print(selectionSort([4,5,2,3]))
+print(bubbleSort([4,5,2,3]))
