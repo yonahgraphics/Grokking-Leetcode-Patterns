@@ -10,7 +10,11 @@ array to confirm this assumption. If we find a new minimum, we update the index 
 minimum. At the end of this, we swap the new minimum with the current minimum as the algorithm 
 continues
 """
-# Time complexity: O(n^2)
+# Time complexity: 
+# Best case: O(n^2)
+# Average case: O(n^2)
+# Worst case: O(n^2)
+
 # Space complexity: O(1)
 def selectionSort(nums):
     for i in range(len(nums)-1):

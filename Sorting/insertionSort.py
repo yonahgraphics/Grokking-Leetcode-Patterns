@@ -3,8 +3,13 @@
                   INSERTION SORT
 ----------------------------------------------------
 """
-# Time complexity: O(n^2)
+# Time complexity: 
+# Best case: O(n)
+# Average case: O(n^2)
+# Worst case: O(n^2)
+
 # Space complexity: O(1)
+
 def insertionSort(nums):
     for i in range(1, len(nums)):
         while i > 0 and nums[i-1] > nums[i]:

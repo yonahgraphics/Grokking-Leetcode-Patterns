@@ -34,6 +34,9 @@ def productExceptSelf(nums):
     return res
 
 #Approach 2:
+#Points to note about this approach
+# Works only if the input array does not contain any zeros
+# Won't be accepted since we can't use a division operator
 # Time complexity: O(n)
 # Space complexity: O(n)
 
