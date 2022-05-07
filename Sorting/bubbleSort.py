@@ -13,13 +13,14 @@ they don't matching the sorting criteria. This process continues to the end of t
 
 # Space complexity: Best case: O(1)
 def bubbleSort(nums):
-    for i in range(len(nums)):
+    arrayLength = len(nums)
+    for i in range(arrayLength):
         arrayIsSorted = True
-        for j in range(i, len(nums)-1):
-            prevIndex = j
-            currentIndex = j+1
-            if nums[prevIndex] > nums[currentIndex]:
-                nums[prevIndex], nums[currentIndex] = nums[currentIndex], nums[prevIndex]
+        for j in range(arrayLength-i-1):
+            currentIndex = j
+            nextIndex = j+1
+            if nums[nextIndex] < nums[currentIndex]:
+                nums[nextIndex], nums[currentIndex] = nums[currentIndex], nums[nextIndex]
                 arrayIsSorted = False 
         if arrayIsSorted: break # If we receive a sorted list, we really dnt want to sort it
         # We can use a flag to detect if it is sort and break out of the loop, reducing the 
