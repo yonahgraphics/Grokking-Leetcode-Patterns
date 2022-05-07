@@ -3,8 +3,8 @@
                   BUBBLE SORT
 ----------------------------------------------------
 Description:
-The algorith works comapring each element with the rest of the elements starting with the first
-and swapping them whenever they don't matching the sorting order.
+The algorith works comparing adjacent elements and and swapping them whenever 
+they don't matching the sorting criteria. This process continues to the end of the array
 """
 # Time complexity: 
 # Best case: O(n)
@@ -21,7 +21,7 @@ def bubbleSort(nums):
             if nums[prevIndex] > nums[currentIndex]:
                 nums[prevIndex], nums[currentIndex] = nums[currentIndex], nums[prevIndex]
                 arrayIsSorted = False 
-        if isSorted: break # If we receive a sorted list, we really dnt want to sort it
+        if arrayIsSorted: break # If we receive a sorted list, we really dnt want to sort it
         # We can use a flag to detect if it is sort and break out of the loop, reducing the 
         # time complexity to O(n)
             
