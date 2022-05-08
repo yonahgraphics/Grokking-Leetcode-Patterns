@@ -17,8 +17,8 @@ Explanation: There is no common prefix among the input strings.
 # Space complexity: O(1)
 def longestCommonPrefix(strs):
     firstString = strs[0]
-    res = ""
     
+    res = ""
     for i in range(len(firstString)):
         for s in strs:
             indexOutOfBounds = (i == len(s))
@@ -26,3 +26,6 @@ def longestCommonPrefix(strs):
                 return res
         res += firstString[i]
     return res
+
+
+print(longestCommonPrefix(["boy", "box", "body"]))
