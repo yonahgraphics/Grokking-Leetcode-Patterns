@@ -12,7 +12,8 @@ Input: a = "1010", b = "1011"
 Output: "10101"
 
 """
-
+# Time complexity: O(max(n, m)), where n and m are the lengths of the two string
+# Space complexity: O(1)
 def addBinary(a, b):
         carry = 0
         totalStr = ""
