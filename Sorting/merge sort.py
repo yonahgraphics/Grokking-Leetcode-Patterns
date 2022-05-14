@@ -1,3 +1,12 @@
+# Mergesort analysis
+# Stable sorting algorithm
+# Divide and Conquer algorithm
+# Recursive algorithm
+# Not inplace sorting algorithm
+
+# Time complexity: O(nlogn)
+# Space complexity: O(n)
+
 def merge(left, right):
     result = []
     i = j = 0
