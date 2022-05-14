@@ -18,7 +18,7 @@ Output: ["the","is","sunny","day"]
 Explanation: "the", "is", "sunny" and "day" are the four most frequent words, with the 
 number of occurrence being 4, 3, 2 and 1 respectively.
 """
-# Approach 2: Using a maxheap
+# Approach: Using a maxheap
 # Time complexity: O(klogn)
 # Space complexity: O(n)
 import heapq
