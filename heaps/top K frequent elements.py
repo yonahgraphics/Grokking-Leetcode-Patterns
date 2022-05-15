@@ -12,7 +12,7 @@ Input: nums = [1], k = 1
 Output: [1]
 """
 
-# Approach 1: Using a maxheap
+# Approach 1: Using a hashmap
 # Time complexity: O(nlogn)
 # Space complexity: O(n)
 
@@ -62,5 +62,25 @@ def topKFrequent(self, nums, k):
         k -= 1
     return result
         
-        
-        
+    
+# Approach 3: Using BucketSort
+# Time complexity: O(n)
+# Space complexity: O(n)
+def topKFrequent(self, nums, k):
+        numFrequencyMap = {}
+        result = []
+        for num in nums:
+            numFrequencyMap[num] = 1 + numFrequencyMap.get(num, 0)
+        freqArray = [[] for i in range(len(nums) + 1)]
+        for key, value in numFrequencyMap.items():
+            freqArray[value].append(key)
+
+        i = len(freqArray)-1
+        while i >= 0:
+            for num in freqArray[i]:
+                result.append(num)
+                if len(result) == k:
+                    return result
+            i -= 1
+        return-1
+    
