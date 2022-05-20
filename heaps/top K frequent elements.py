@@ -54,7 +54,8 @@ def topKFrequent(self, nums, k):
             numToCountMap[num] += 1
             
     for num, freq in numToCountMap.items():
-        heapq.heappush(heap, (-freq, num))
+        heap.append((-freq, num))
+    heapq.heapify(heap)
     
     while k > 0:
         _, num = heapq.heappop(heap)

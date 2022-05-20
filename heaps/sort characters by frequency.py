@@ -28,7 +28,8 @@ def frequencySort(s):
     maxheap = []
     
     for char, freq in charFreq.items():
-        heapq.heappush(maxheap, (-freq, char))
+        maxheap.append((-freq, char))
+    heapq.heapify(maxheap)
     result = ""
     
     while maxheap:

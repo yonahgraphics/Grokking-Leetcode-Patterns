@@ -34,7 +34,8 @@ def topKFrequent(words, k):
             wordToCountMap[word] += 1
 
     for word, freq in wordToCountMap.items():
-        heapq.heappush(heap, (-freq, word))
+        heap.append((-freq, word))
+    heapq.heapify(heap)
 
     while k > 0:
         _, word = heapq.heappop(heap)

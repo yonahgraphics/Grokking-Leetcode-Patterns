@@ -28,7 +28,8 @@ def findKthLargest(self, nums, k):
     heap = []
 
     for i in range(len(nums)):
-        heapq.heappush(heap, -1*nums[i])
+        heap.append(-1*nums[i])
+    heapq.heapify(heap)
     while k > 0:
         K_largest = -1*(heapq.heappop(heap))
         k -= 1
