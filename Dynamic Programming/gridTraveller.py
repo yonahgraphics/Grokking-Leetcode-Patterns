@@ -5,7 +5,8 @@
 # Leetcode: https://leetcode.com/problems/unique-paths/
 
 # Brute-force
-#Time complexity:  O(2^m+n)
+#Time complexity:  O(2^m+n), where m + n is the height of the tree. (m + n - 1 === m + n )
+#This is because, in general, the recusive tree is going to have a height of m + n -1 === m + n
 #Space complexity: O(m+n)
 def gridTraveller(m, n):
     if m == 0 or n == 0:
@@ -25,7 +26,7 @@ def gridTravellerOptimum(m, n, memo = {}):
     key = str(m) + "_"+ str(n)
     if key in memo:
         return memo[key]
-    
+
     if m == 0 or n == 0:
         return 0
     if m == 1 or n == 1:
@@ -38,7 +39,7 @@ class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
         memo = {}
         return self.helper(m, n, memo)
-    
+
     def helper(self, m, n, memo):
         key = str(m) + "_" + str(n)
         if key in memo:
@@ -49,10 +50,9 @@ class Solution:
             return 1
         memo[key] = self.helper(m-1, n , memo) + self.helper(m, n-1, memo)
         return memo[key]
-        
+
 
 
 
 if __name__ == "__main__":
     print(gridTravellerOptimum(18, 18))
-    
