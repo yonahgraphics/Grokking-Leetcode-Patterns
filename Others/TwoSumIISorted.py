@@ -32,7 +32,7 @@ def twoSumIINaive(nums, target):
 def towSUmIITwoPointers(nums, target):
     i = 0
     j = len(nums) - 1
-    while j > i:
+    while i < j:
         sum = nums[i] + nums[j]
         if sum == target:
             return [i+1,j+1]

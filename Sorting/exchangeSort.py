@@ -14,7 +14,7 @@ and swapping them whenever they don't matching the sorting order.
 # Space complexity: Best case: O(1)
 def exchangeSort(nums):
     for i in range(len(nums)-1):
-        for j in range(i +1, len(nums)):
+        for j in range(i+1, len(nums)):
             prevIndex = i
             currentIndex = j
             if nums[prevIndex] > nums[currentIndex]:

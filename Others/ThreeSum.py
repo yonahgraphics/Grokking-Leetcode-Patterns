@@ -34,7 +34,7 @@ def threeSumOptimum(nums): # O(n2)
             else:
                 res.append([nums[i], nums[l], nums[r]])
                 l += 1
-                while nums[l] == nums[l-1] and l < r: # We keep shifting the left pointer to avoid duplicates while l < r
+                if nums[l] == nums[l-1] and l < r: # We keep shifting the left pointer to avoid duplicates while l < r
                     l += 1
     return res
 

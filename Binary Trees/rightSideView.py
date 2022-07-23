@@ -49,7 +49,7 @@ def rightSideView(root: Optional[TreeNode]) -> List[int]:
 #         self.right = right
 from collections import deque
 class Solution:
-    def rightSideView(self, root: Optional[TreeNode]) -> List[int]:
+    def leftSideView(self, root: Optional[TreeNode]) -> List[int]:
         if not root:
             return []
         

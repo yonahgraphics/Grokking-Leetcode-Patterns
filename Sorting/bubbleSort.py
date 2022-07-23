@@ -4,7 +4,7 @@
 ----------------------------------------------------
 Description:
 The algorith works comparing adjacent elements and and swapping them whenever 
-they don't matching the sorting criteria. This process continues to the end of the array
+they don't match the sorting criteria. This process continues to the end of the array
 """
 # Time complexity: 
 # Best case: O(n)
