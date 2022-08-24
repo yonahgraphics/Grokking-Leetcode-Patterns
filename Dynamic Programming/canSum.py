@@ -16,10 +16,11 @@ def canSumOptimum(target, arr, memo = {}):
     if target in memo:
         return memo[target]
     if target == 0: return True
-    if target < 0: return False
+    # if target < 0: return False
 
     for i in range(len(arr)):
         remainder = target - arr[i]
+        if remainder < 0: continue
         memo[remainder] = canSumOptimum(remainder, arr, memo)
         if memo[remainder] == True: return True
     memo[target] = False
@@ -29,4 +30,4 @@ def canSumOptimum(target, arr, memo = {}):
 
 if __name__ == "__main__":
     # print(canSum(500, [7,14]))
-    print(canSumOptimum(300, [7, 14]))
+    print(canSumOptimum(0, [7, 2]))

@@ -22,8 +22,16 @@ def singleNumber1(nums):
             seen.add(num)
     return seen.pop()
 
+# Approach 2: Hashmap
+def singleNumber2(nums):
+    map = {}
+    for num in nums:
+        map[num] = 1 + map.get(num, 0)
+    for k,v in map.items():
+        if v == 1:
+            return k
 
-# Approach 2: Bit Manipulation
+# Approach 3: Bit Manipulation
 # The intution is that when you XOR any number with 0 you get back that number
 # Also, the order of XOR doesn't change the result
 '''
@@ -40,7 +48,7 @@ We can set our intitial result to 0 since we know that  0^anynumber gives back t
 '''
 # Time complexity: O(n)
 # Space complexity: O(1)
-def singleNumber2(nums):
+def singleNumber3(nums):
     result = 0 # n^0 = n
 
     for num in nums:
@@ -51,5 +59,5 @@ if __name__ == "__main__":
     nums = [4,1,2,1,2]
     print(singleNumber1(nums))
     print(singleNumber2(nums))
+    print(singleNumber3(nums))
 
-        
