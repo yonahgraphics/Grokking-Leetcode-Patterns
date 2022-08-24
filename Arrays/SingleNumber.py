@@ -12,6 +12,8 @@ Output: 4
 '''
 # Aproach 1: HashSet
 # This won't work since it violates the constant space requirement
+# Time complexity: O(n)
+# Space complexity: O(n)
 def singleNumber1(nums):
     seen = set()
 
