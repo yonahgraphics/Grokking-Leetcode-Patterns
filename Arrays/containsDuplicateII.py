@@ -20,12 +20,11 @@ def containsNearbyDuplicate1(nums, k):
 #Space complexity: O(n)
 def containsNearbyDuplicate2(nums, k):
     visited = {}
-        
+
     for idx, num in enumerate(nums):
         if num in visited and abs(visited[num] - idx) <= k:
             return True
-        else:
-            visited[num] = idx
+        visited[num] = idx
     return False
 
 if __name__ == "__main__":
