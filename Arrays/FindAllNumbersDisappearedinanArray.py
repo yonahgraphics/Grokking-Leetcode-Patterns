@@ -14,7 +14,7 @@ Output: [2]
 """
 
 # Time complexity: O(n)
-# Space complexity: O1)
+# Space complexity: O(1)
 def findDisappearedNumbers(nums):
     seen = set(nums)
     res = []
@@ -22,7 +22,7 @@ def findDisappearedNumbers(nums):
         if i not in seen:
             res.append(i)
     return res
-    
+
 # Time complexity: O(n)
 # Space complexity: O(1)
 def findDisappearedNumbers1(nums):
@@ -34,11 +34,10 @@ def findDisappearedNumbers1(nums):
         if nums[i] > 0:
             res.append(i+1)
     return res
-    
 
-    
+
+
 
 if __name__ == "__main__":
     print(findDisappearedNumbers([1,3,3,3]))
     print(findDisappearedNumbers1([1,3,3,3]))
-        

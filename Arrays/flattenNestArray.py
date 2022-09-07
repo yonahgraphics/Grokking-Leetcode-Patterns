@@ -1,6 +1,6 @@
 '''
 You are given a nested list of integers nestedList. '
-Each element is either an integer or a list whose elements 
+Each element is either an integer or a list whose elements
 may also be integers or other lists. Implement a function to flatten it.
 
 Input: nestedList = [[1,1],2,[1,1]]
@@ -15,7 +15,7 @@ Output: [1,4,6]
 # Space complexity: O(n*m)
 def flatten2DArray(nums, res = []):
     for array in nums:
-        if type(array) == int:
+        if isinstance(array, int):
             res.append(array)
         else:
             flatten2DArray(array, res)
