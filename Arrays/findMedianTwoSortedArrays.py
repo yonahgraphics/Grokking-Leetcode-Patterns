@@ -16,7 +16,7 @@ Explanation: merged array = [1,2,3] and median is 2.
 # Space complexity: O(m+n)
 def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
     merged = []
-    
+
     i = 0
     j = 0
     while i < len(nums1) and j < len(nums2):
@@ -32,14 +32,14 @@ def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         merged.extend(nums2[j:])
     low = 0
     high = len(merged) - 1
-    
+
     mid = (low + high)//2
-    
+
     if len(merged)%2 == 0:
         median = (merged[mid] + merged[mid + 1]) /2
     else:
         median = merged[mid]
-        
+
     return median
 
     if __name__ == "__main__":

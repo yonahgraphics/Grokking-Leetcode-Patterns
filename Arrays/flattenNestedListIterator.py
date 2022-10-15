@@ -1,5 +1,5 @@
 '''
-You are given a nested list of integers nestedList. Each element is either an integer 
+You are given a nested list of integers nestedList. Each element is either an integer
 or a list whose elements may also be integers or other lists. Implement an iterator to flatten it.
 
 Implement the NestedIterator class:
@@ -52,7 +52,7 @@ class NestedIterator(object):
         """
         self.queue = []
         self.counter = 0
-        
+
         def helper(nestedList):
 
             for element in nestedList:
@@ -65,10 +65,10 @@ class NestedIterator(object):
                 else:
                     # Inductive step:
                     # Keep unpacking to next level
-                    helper( element.getList() )               
-    
+                    helper( element.getList() )
+
         helper(nestedList )
-      
+
 
     def next(self):
         """
@@ -77,15 +77,15 @@ class NestedIterator(object):
         element = self.queue[self.counter]
         self.counter += 1
         return element
-    
-        
+
+
 
     def hasNext(self):
         """
         :rtype: bool
         """
-        return self.counter < len(self.queue) 
-        
+        return self.counter < len(self.queue)
+
 
 # Your NestedIterator object will be instantiated and called as such:
 # i, v = NestedIterator(nestedList), []
