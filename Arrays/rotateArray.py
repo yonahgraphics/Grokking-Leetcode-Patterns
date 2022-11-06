@@ -16,15 +16,15 @@ Example 2:
 
 Input: nums = [-1,-100,3,99], k = 2
 Output: [3,99,-1,-100]
-Explanation: 
+Explanation:
 rotate 1 steps to the right: [99,-1,-100,3]
 rotate 2 steps to the right: [3,99,-1,-100]
 """
 # Time Complexity: O(n)
 # Space Complexity: O(n)
 def rotate(nums, k):
-    k = k % len(nums)     #take care of the case where k >= len(nums)  
-    nums[:] = nums[-k:] + nums[:-k] 
+    k = k % len(nums)     #take care of the case where k >= len(nums)
+    nums[:] = nums[-k:] + nums[:-k]
     return nums
 
 # Time Complexity: O(n)
@@ -39,7 +39,7 @@ def rotate1(nums, k):
     return nums
 
 # Time complexity: O(n)
-# Space complexity: O(1)    
+# Space complexity: O(1)
 def rotate(self, nums, k):
     k = k%len(nums)
     # Reverse the whole array
@@ -49,8 +49,7 @@ def rotate(self, nums, k):
         nums[i], nums[j] = nums[j], nums[i]
         i += 1
         j -= 1
-    print(nums)
-    
+
     # Reverse the first k elements
     i = 0
     j = k-1
