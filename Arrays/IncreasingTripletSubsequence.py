@@ -29,6 +29,30 @@
 # Follow up: Could you implement a solution that runs in O(n) time complexity and O(1) space complexity?
 
 
+# Naive approach
+# Time Complexity: O(n3)
+# Space Complexity: O(1)
+def increasingTriplet(nums):
+            """
+            :type nums: List[int]
+            :rtype: bool
+            """
+            if len(nums) < 3:
+                return False
+
+            for i in range(len(nums)-2):
+                for j in range(i + 1, len(nums)-1):
+                    for k in range(j + 1, len(nums)):
+                        print(nums[i], nums[j], nums[k])
+                        if (nums[i] < nums[j]) and (nums[j] < nums[k]):
+                            return True
+            return False
+
+
+
+# Optimum approach
+# Time Complexity: O(1)
+# Space Complexity: O(1)
 def increasingTriplet(nums):
             """
             :type nums: List[int]
