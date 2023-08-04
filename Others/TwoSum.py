@@ -17,7 +17,7 @@ def twoSumNaive(arr, target): # O(n2) time, O(1) space
 
 # Use a hashmap to keep all visited nums
 # Check if the diff btn the target and nus starting with the second one are
-# in the hasmap, if so, return the idx of the current num and the idx in 
+# in the hasmap, if so, return the idx of the current num and the idx in
 # the map that corresponds to the diff
 def twoSumOptimum(arr, target): # O(n) time, O(n) space
     visited = {} # num : idx
@@ -26,11 +26,10 @@ def twoSumOptimum(arr, target): # O(n) time, O(n) space
         diff = target - arr[i]
         if diff in visited:
             return [visited[diff], i]
-        
+
         visited[arr[i]] = i
 
 
 if __name__ == "__main__":
     print(twoSumOptimum([1,3,4,5], 7))
     print(twoSumNaive([1,3,4,5], 7))
-  

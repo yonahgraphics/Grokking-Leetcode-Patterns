@@ -10,7 +10,7 @@ class Node:
 # Alvin says it's O(n)
 def bfs(root):
     if root is None:
-        return [[]]
+        return []
     queue = []
     res = []
     queue.append(root)
